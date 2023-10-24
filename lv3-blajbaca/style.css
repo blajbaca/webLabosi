@@ -1,0 +1,232 @@
+@import url("https://fonts.google.com/specimen/Rubik");
+
+/* CSS variables */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --font-size-base: 16px;
+    --font-family-base: Arial, sans-serif;
+}
+
+/* Global styles */
+body {
+    font-size: var(--font-size-base);
+    font-family: var(--font-family-base);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color:  #ebcce9;
+}
+
+h1 {
+    font-family: 'Rubik',sans-serif;
+    font-size: 2.5em;
+    margin-top: 0;
+    align-self: center;
+    display: flex;
+    justify-content: space-around;
+    color:#000;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+    font-family: 'Rubik',sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header styles */
+.cart-button {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.cart-badge {
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 50%;
+    padding: 0.2em 0.5em;
+    margin-left: 0.5em;
+    font-size: 0.8em;
+    font-family: 'Rubik',sans-serif;
+}
+
+/* Items grid styles */
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1em;
+    margin-top: 1em;
+    padding: 10px 10px 10px 10px;
+    background-color: #e8b5c8;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 1em;
+    font-family: 'Rubik',sans-serif;
+    background-color: #fff;
+}
+
+.item h2 {
+    margin-top: 0.5em;
+}
+
+.item p {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
+.item img{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.item button:hover{
+    background-color: rgb(206, 64, 116);;
+}
+
+.add-to-cart-btn {
+    background-color:  #e8b5c8;
+    color: #000;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-family: 'Rubik',sans-serif;
+}
+
+.modal.show-modal {
+    display: block;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 1em;
+    border: 1px solid #ccc;
+    max-width: 600px;
+    font-family: 'Rubik',sans-serif;
+}
+
+.close {
+    float: right;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cart-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik',sans-serif;
+}
+
+.cart-items li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+}
+
+.cart-items li span {
+    margin-left: 0.5em;
+}
+
+.cart-total {
+    font-weight: bold;
+}
+
+.buy-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 1em;
+    font-family: 'Rubik',sans-serif;
+}
+
+.remove-from-cart{
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .cart-container{
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+    font-family: 'Rubik',sans-serif;
+  }
